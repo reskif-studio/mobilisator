@@ -144,6 +144,29 @@
             display: block;
         }
 
+        .navbar-logos {
+            justify-self: end;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .navbar-reskif-link {
+            display: block;
+        }
+
+        .navbar-reskif {
+            height: 32px;
+            width: auto;
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            .navbar-logos { gap: 8px; }
+            .navbar-reskif { height: 20px; }
+            .navbar-logo { width: 40px; height: 40px; }
+        }
+
         /* ── Main layout ── */
         #mainContent {
             display: flex;
@@ -945,7 +968,10 @@
                 </button>
             </div>
             <div></div>
-            <img src="/assets/LogoOEP.png" alt="On Est Prêt" class="navbar-logo" style="justify-self:end;">
+            <div class="navbar-logos">
+                <a href="https://reskif.org" target="_blank" rel="noopener" class="navbar-reskif-link"><img src="/assets/reskif_logo.svg" alt="Reskif" class="navbar-reskif"></a>
+                <img src="/assets/LogoOEP.png" alt="On Est Prêt" class="navbar-logo">
+            </div>
         </nav>
 
         <div class="container">
